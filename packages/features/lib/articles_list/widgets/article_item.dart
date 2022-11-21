@@ -16,8 +16,11 @@ class ArticleItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset(
-            article.headerImages.first,
+          Hero(
+            tag: 'article_header_${article.id}',
+            child: Image.asset(
+              article.headerImages.first,
+            ),
           ),
           const SizedBox(
             height: 20,

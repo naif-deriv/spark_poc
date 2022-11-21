@@ -2,6 +2,8 @@ import 'package:features/articles_list/widgets/article_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../article_details/article_details.dart';
+import '../../navigation/navigator.dart';
 import '../cubit/articles_list_cubit.dart';
 
 class ArticlesList extends StatelessWidget {
@@ -25,8 +27,16 @@ class ArticlesList extends StatelessWidget {
             return Column(
               children: List.generate(
                 state.articles.length,
-                (index) => ArticleItem(
-                  state.articles[index],
+                (index) => GestureDetector(
+                  onTap: () => Navigation.push(
+                    ArticleDetailsScreen(
+                      article: state.articles[index],
+                    ),
+                    context,
+                  ),
+                  child: ArticleItem(
+                    state.articles[index],
+                  ),
                 ),
               ),
             );

@@ -31,12 +31,7 @@ dev_dependencies:
 flutter:
   # To add assets to your package, add an assets section, like this:
   assets:
-    - ../../assets/splash.png
-    - ../../assets/article-1-header.png
-    - ../../assets/article-2-header.png
-    - ../../assets/article-3-header.png
-    - ../../assets/article-4-header.png
-    - ../../assets/article-5-header.png
+    - ../../assets/
 
   # For details regarding assets in packages, see
   # https://flutter.dev/assets-and-images/#from-packages

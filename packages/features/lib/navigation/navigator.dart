@@ -13,7 +13,7 @@ class Navigation {
     );
   }
 
-  static void pop(Widget widget, BuildContext context) {
+  static void pop(BuildContext context) {
     Navigator.of(context).pop();
   }
 }
