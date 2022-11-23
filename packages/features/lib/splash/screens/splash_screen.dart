@@ -1,8 +1,8 @@
+import 'package:features/auth/screens/login_screen.dart';
 import 'package:features/splash/cubit/splash_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../homepage/screens/homepage.dart';
 import '../../navigation/navigator.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
       child: BlocListener<SplashCubit, SplashState>(
         listener: (context, state) {
           if (state is SplashFinished) {
-            Navigation.pushReplacement(const Homepage(), context);
+            Navigation.pushReplacement(const LoginScreen(), context);
           }
         },
         child: Scaffold(

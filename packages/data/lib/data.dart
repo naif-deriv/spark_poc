@@ -4,5 +4,4 @@
 library data;
 
 export 'src/repositories/articles_repository.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/repositories/editions_repository.dart';
